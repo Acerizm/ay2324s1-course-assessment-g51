@@ -96,20 +96,20 @@ const RootApp = () => {
 				<BrowserRouter>
 					<Routes>
 						{/* All protected routes are written here */}
-						<Route
+						{/* <Route
 							element={
 								<>
 									<Navbar />
-									<ProtectedRoute />
-									<RedirectUserRoute />
+									{<ProtectedRoute />}
+									{<RedirectUserRoute /> }
 								</>
 							}
-						>
-							<Route path="home" element={<QuestionsPage />} />
-							<Route path="user" element={<UserPage />} />
-							<Route path="/admin" element={<AdminPage />} />
-							<Route path="practice" element={<PracticePage />} />
-						</Route>
+						> 
+					</Route>*/}
+						<Route path="/home" element={<QuestionsPage />} />
+						<Route path="/user" element={<UserPage />} />
+						<Route path="/admin" element={<AdminPage />} />
+						<Route path="/practice" element={<PracticePage />} />
 						{/* All non-protected routes are written here */}
 						<Route path="/" element={<SignInPage />} />
 						<Route path="/signin" element={<SignInPage />} />
@@ -120,7 +120,7 @@ const RootApp = () => {
 					</Routes>
 				</BrowserRouter>
 			</div>
-		</Provider>
+		</Provider >
 	);
 };
 const root = ReactDOM.createRoot(
